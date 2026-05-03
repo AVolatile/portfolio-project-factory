@@ -14,3 +14,16 @@ When creating a new portfolio project from Codex Cloud:
 4. Use lowercase kebab-case repo names.
 5. If GitHub repo creation is not available from the cloud task, prepare the finished project and provide exact `gh repo create` and `git push` commands.
 6. Always include the final GitHub repo URL in the README and final response.
+
+## Netlify Deployment Rule
+
+When preparing a project for Netlify:
+
+1. Add a `netlify.toml` file to the generated project.
+2. Use this configuration:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+```
